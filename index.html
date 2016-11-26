@@ -5,6 +5,9 @@
     <meta charset="utf-8">
     <title>Michael Vincent Parlato</title>
     <link rel="stylesheet" type="text/css" href="./app.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="./bundle.js"></script>
   </head>
 
   <body>
@@ -15,211 +18,15 @@
       </p>
       <ul class="links">
         <a href="./resume.pdf" title="Michael's Resume"><li class="resume"></li></a>
-        <a href="https://github.com/mvincent7891" title="Michael's Github"><li class="github"></li></a>
         <a href="https://www.linkedin.com/in/mvparlato" title="Michael's LinkedIn"><li class="linkedin"></li></a>
+        <a href="https://github.com/mvincent7891" title="Michael's Github"><li class="github"></li></a>
       </ul>
     </header>
 
-    <section class="project-list-container">
-
-      <ul class="project-list">
-
-        <li class="project">
-          <ul class="project">
-            <li class="thumbnail three">
-              <a href="https://mvincent7891.github.io/scalable/#/" class="image">
-                <img class="project" src="./images/scalable.png" alt="Scalable">
-              </a>
-            </li>
-            <li class="description">
-              <h2 class="project">
-                <a href="https://mvincent7891.github.io/scalable/#/" class="title">
-                  Scalable
-                </a>
-              </h2>
-              Theoretically, Scalable is an app meant to help guitarists visualize the fretboard. Practically, it is a project that allowed me to focus on something I'm passionate about while sharpening my React and Redux skillz. This is very much a work in progress, but its also functional at the moment.
-            </li>
-          </ul>
-          <hr>
-        </li>
-
-        <li class="project">
-          <ul class="project">
-            <li class="thumbnail three">
-              <a href="https://mvincent7891.github.io/bart_art/" class="image">
-                <img class="project" src="./images/transit.gif" alt="Transit PathFinder">
-              </a>
-            </li>
-            <li class="description">
-              <h2 class="project">
-                <a href="https://mvincent7891.github.io/bart_art/" class="title">
-                  Transit PathFinder
-                </a>
-              </h2>
-              Transit PathFinder is an algorithm visualizer, similar to PathFinding.js. I pulled subway data from the NYC MTA and San Francisco BART APIs and mapped the coordinates onto an HTML5 Canvas. After the user selects an origin and destination, the app uses (and animates) Breadth First Search to find the optimal path between them. Future versions will take distance and departure and arrival times into account as these are readily available with metro subway APIs. The app utilizes jQuery for DOM manipulation and pure HTML5 Canvas and CSS for animation and styling.
-            </li>
-          </ul>
-          <hr>
-        </li>
-        <li class="project">
-          <ul class="project">
-            <li class="thumbnail one">
-              <a href="http://www.iretain.io" class="image">
-                <img class="project" src="./images/iretain.png" alt="iRetain">
-              </a>
-            </li>
-            <li class="description">
-              <h2 class="project">
-                <a href="http://www.iretain.io" class="title">
-                  iRetain
-                </a>
-              </h2>
-              iRetain is a full-stack web app used for studying flash cards, inspired by Brainscape. It utilizes Ruby on Rails and a PostgreSQL database on the backend, and React.js with a Redux architectural framework on the frontend. I built the MVP (from database to front end) in just 10 days. The project's highlight feature is a Chrome extension (also called iRetain) that allows the dynamic creation of flash cards from anywhere on the web.
-            </li>
-          </ul>
-          <hr>
-        </li>
-
-
-
-        <li class="project">
-          <ul class="project">
-            <li class="thumbnail four">
-              <a href="https://github.com/mvincent7891/lite_rail" class="image">
-                <img class="project" src="./images/literail.png" alt="LiteRail">
-              </a>
-            </li>
-            <li class="description">
-              <h2 class="project">
-                <a href="https://github.com/mvincent7891/lite_rail" class="title">
-                  LiteRail
-                </a>
-              </h2>
-               LiteRail is a lightweight framework inspired by Rails, with its own version of ActiveRecord, built from the ground up. Developers can download the skeleton from GitHub and follow along with the README to create their very own LiteRail websites with functional backends. The project includes searchable and associatable modules, allowing model associations and chainable queries (via relations) just like Rails. Also included are a basic development server powered by Rack, command line model, table, and controller generation, flash and session cookie storage, and protection from forgery.
-            </li>
-          </ul>
-          <hr>
-        </li>
-
-        <li class="project">
-          <ul class="project">
-            <li class="thumbnail two">
-              <a href="https://chrome.google.com/webstore/detail/iretain/gbeamkiokdfmamlmmkhddfdpbmbgmkic?utm_source=gmail" class="image">
-                <img class="project" src="./images/ex_demo.gif" alt="iRetain Chrome Extension">
-              </a>
-            </li>
-            <li class="description">
-              <h2 class="project">
-                <a href="https://chrome.google.com/webstore/detail/iretain/gbeamkiokdfmamlmmkhddfdpbmbgmkic?utm_source=gmail" class="title">
-                  iRetain Chrome Extension
-                </a>
-              </h2>
-              The iRetain Chrome Extension sets the iRetain flashcard app apart from all others. This extension allows users to dynamically create flash cards while browsing, as long as they are logged in to iRetain in the background. Simply highlight a word, right click, select "Retain It," and the definition will be displayed in a notification. In the background, iRetain creates a flash card for you to revisit later. Future releases will also highlight previously looked up words on the current page, as well as synonyms. Visit the Chrome web store to download the extension.
-            </li>
-          </ul>
-          <hr>
-        </li>
-
-        <li class="project">
-          <ul class="project">
-            <li class="thumbnail eight">
-              <iframe width="80%" height="60%"
-              src="https://www.youtube.com/embed/nE3gaODyV9w"
-              frameborder="0" allowfullscreen>
-            </iframe>
-          </li>
-          <li class="description">
-            <h2 class="project">
-              <a href="https://www.youtube.com/embed/nE3gaODyV9w" class="title">
-                Gesture Recognition using Artificial Neural Networks
-              </a>
-            </h2>
-            In 2013, as an undergraduate student in electrical engineering at the University of West Florida, I led my team in the design of a gesture recognition application using Matlab. Having collected hundreds of images of American Sign Language (ASL) gestures, I was responsible for the design and implementation of various feature extraction algorithms. Some of the challenges I tackled included identifying and isolating the hand in a given image, locating finger tips and building a skeleton of the hand, and creating an ordered outline of the hand in order to measure curvature as well as other parameters. On design day, we watched proudly as the application correctly interpreted "Hello world," for the crowd of onlookers. ​
-          </li>
-        </ul>
-        <hr>
-      </li>
-
-      <li class="project">
-        <ul class="project">
-          <li class="thumbnail eight">
-            <iframe width="80%" height="60%"
-            src="https://www.youtube.com/embed/bbVLbFUvlJc"
-            frameborder="0" allowfullscreen>
-            </iframe>
-          </li>
-          <li class="description">
-            <h2 class="project">
-              <a href="https://www.youtube.com/embed/bbVLbFUvlJc" class="title">
-                Hemoglobe m-Health Anemia Screening System
-              </a>
-            </h2>
-            As a master's student at Johns Hopkins University's Center for Bioengineering Innovation and Design, I had the good fortune of being on a team of exceptionally talented engineers. In addition to traveling to India to manage clinical studies and to Kenya to study the maternal health care system, we designed and built field ready prototypes of an anemia screening system for use in rural communities in developing countries. I was primarily responsible for the integration of the different components of the system, including the mobile app, finger clip, and analog front end. ​
-          </li>
-        </ul>
-        <hr>
-      </li>
-
-      <li class="project">
-        <ul class="project">
-          <li class="thumbnail five">
-            <a href="https://soundcloud.com/trustfunkkids/i-cant-stay" class="image">
-              <img class="tfk" src="./images/tfk.jpg" alt="Trust Funk Kids">
-            </a>
-          </li>
-          <li class="description">
-            <h2 class="project">
-              <a href="https://soundcloud.com/trustfunkkids/i-cant-stay" class="title">
-                Trust Funk Kids
-              </a>
-            </h2>
-            Guitar has been a passion of mine for nearly a decade now. In the summer of 2015, a few friends and I got together to jam. What started as a weekly excuse to get together for a few beers led to the forming of the Trust Funk Kids. Check out our demo track - I Can't Stay - via Soundcloud. The band's sound has been describe as a mix of Taylor Swift, Third Eye Blind, and the Red Hot Chili Peppers - a description I'm both honored and embarrassed to acknowledge. Everyone has an outlet, and music is mine.
-          </li>
-        </ul>
-        <hr>
-      </li>
-
-        <!-- <li class="project">
-          <ul class="project">
-            <li class="thumbnail six">\
-              <a href="http://www.pickingtools.weebly.com/" class="image">
-                <img class="project" src="./images/picking.png" alt="PickingTools">
-              </a>
-            </li>
-            <li class="description">
-              <h2 class="project">
-                <a href="http://www.pickingtools.weebly.com/" class="title">
-                  PickingTools
-                </a>
-              </h2>
-               An eIn the fall of 2015 I decided to combine my passion for playing guitar with another favorite hobby by acting on an idea I'd had for an educational guitar application​. The goal was to design a web app that could help aspiring guitarists (like myself) better visualize the fret board and understand how chords and scales interact with each other. While I was unsure whether the app would eventually prove useful, I jumped at the opportunity to learn JavaScript and HTML5 Canvas. The app did have some unintended benefits - it turned out to be a great tool for writing music in alternate tunings.
-            </li>
-          </ul>
-          <hr>
-        </li> -->
-
-        <li class="project">
-          <ul class="project">
-            <li class="thumbnail seven">
-              <a href="http://www.codeskulptor.org/#user39_8sibh26UD9_43.py" class="image">
-                <img class="tfk" src="./images/asteroids.png" alt="Asteroids">
-              </a>
-            </li>
-            <li class="description">
-              <h2 class="project">
-                <a href="http://www.codeskulptor.org/#user39_8sibh26UD9_43.py" class="title">
-                  Certifications from Coursera and Rice University
-                </a>
-              </h2>
-               In 2014, I started pursuing a certification in CS from Rice University via Coursera, the massive online open courses site. To date, I've collected certifications in Principles of Computing Parts 1 & 2, Introduction to Interactive Programming in Python Parts 1 & 2 and Algorithms 1. The courses have been a great introduction to Python and even gave me the chance to design this simple video game.  Click on the image to the left to check it out (just press the play button in the top left corner to start the game).
-            </li>
-          </ul>
-          <hr>
-        </li>
-
+    <section class="main-content">
+      <ul class="project-container-list" id="list">
 
       </ul>
-
     </section>
 
   </body>
