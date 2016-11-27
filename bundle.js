@@ -75,6 +75,7 @@
 	    element.appendChild(innerDiv(project));
 	    element.appendChild(media(project, key));
 	    element.appendChild(info(project, key));
+	    element.appendChild(description(project, key));
 	    element.appendChild(lowerDiv(project));
 	
 	    var link = document.createElement('a');
@@ -87,6 +88,16 @@
 	  });
 	};
 	
+	var description = function description(project, key) {
+	  var desc = document.createElement('p');
+	  if (project.description) {
+	    desc.id = key;
+	    desc.innerText = project.description;
+	    desc.className = 'project-description hidden';
+	  }
+	  return desc;
+	};
+	
 	var info = function info(project, key) {
 	  var link = document.createElement('a');
 	  if (project.description) {
@@ -97,13 +108,15 @@
 	    link.appendChild(li);
 	    $(link).on('mouseover', function () {
 	      var toHide = $('img#' + key);
-	      console.log(toHide);
+	      var pToHide = $('p#' + key);
 	      toHide.toggleClass('hidden');
+	      pToHide.toggleClass('hidden');
 	    });
 	    $(link).on('mouseleave', function () {
 	      var toHide = $('img#' + key);
-	      console.log(toHide);
+	      var pToHide = $('p#' + key);
 	      toHide.toggleClass('hidden');
+	      pToHide.toggleClass('hidden');
 	    });
 	  }
 	  return link;
@@ -211,7 +224,7 @@
 	    img: './images/transit.gif',
 	    color: colors[2],
 	    skills: ['HTML5 Canvas', 'JS', 'jQuery', 'MTA & BART APIs'],
-	    description: 'Transit PathFinder is an algorithm visualizer, similar to PathFinding.js. I pulled subway data from the NYC MTA and San Francisco BART APIs and mapped the coordinates onto an HTML5 Canvas. After the user selects an origin and destination, the app uses (and animates) Breadth First Search to find the optimal path between them. Future versions will take distance and departure and arrival times into account as these are readily available with metro subway APIs. The app utilizes jQuery for DOM manipulation and pure HTML5 Canvas and CSS for animation and styling.'
+	    description: 'Transit PathFinder is an algorithm visualizer, similar to PathFinding.js. I pulled subway data from the NYC MTA and San Francisco BART APIs and mapped the coordinates onto an HTML5 Canvas. After the user selects an origin and destination, the app uses (and animates) Breadth First Search to find the optimal path between them. \n\n      Future versions will take distance and departure and arrival times into account as these are readily available with metro subway APIs.'
 	  },
 	  literail: {
 	    name: 'LiteRail',
@@ -221,7 +234,7 @@
 	    img: './images/literail.png',
 	    color: colors[3],
 	    skills: ['Ruby', 'SQLite3'],
-	    description: 'LiteRail is a lightweight framework inspired by Rails, with its own version of ActiveRecord, built from the ground up. Developers can download the skeleton from GitHub and follow along with the README to create their very own LiteRail websites with functional backends. The project includes searchable and associatable modules, allowing model associations and chainable queries (via relations) just like Rails. Also included are a basic development server powered by Rack, command line model, table, and controller generation, flash and session cookie storage, and protection from forgery.'
+	    description: 'A lightweight framework inspired by Rails, built from the ground up. Developers can create their own LiteRail websites with functional backends.\n\n    The project includes searchable and associatable modules, allowing model associations and chainable queries (via relations) just like Rails. Also included are a basic development server powered by Rack, command line model, table, and controller generation, flash and session cookie storage, and protection from forgery.'
 	  },
 	  iretain_chrome_ex: {
 	    name: 'iRetain Chrome Extension',
@@ -231,7 +244,7 @@
 	    img: './images/ex_demo.gif',
 	    color: colors[4],
 	    skills: ['JS', 'iRetain', 'Chrome Extension'],
-	    description: 'The iRetain Chrome Extension sets the iRetain flashcard app apart from all others. This extension allows users to dynamically create flash cards while browsing, as long as they are logged in to iRetain in the background. Simply highlight a word, right click, select "Retain It," and the definition will be displayed in a notification. In the background, iRetain creates a flash card for you to revisit later. Future releases will also highlight previously looked up words on the current page, as well as synonyms. Visit the Chrome web store to download the extension.'
+	    description: 'The iRetain Chrome Extension sets the iRetain flashcard app apart from all others. This extension allows users to dynamically create flash cards while browsing, as long as they are logged in to iRetain in the background. \n\n      Highlight a word, right click, and select "Retain It" to view a definition. In the background, iRetain creates a flash card. Future releases will also highlight previously looked up words on the current page, as well as synonyms. Visit the Chrome web store to download the extension.'
 	  },
 	  asl: {
 	    name: 'ASL Recognition',
@@ -241,7 +254,7 @@
 	    video: 'https://www.youtube.com/embed/nE3gaODyV9w',
 	    color: colors[5],
 	    skills: ['Matlab', 'Computer Vision', 'Pattern Recognition', 'Neural Networks'],
-	    description: 'In 2013, as an undergraduate student in electrical engineering at the University of West Florida, I led my team in the design of a gesture recognition application using Matlab. Having collected hundreds of images of American Sign Language (ASL) gestures, I was responsible for the design and implementation of various feature extraction algorithms. Some of the challenges I tackled included identifying and isolating the hand in a given image, locating finger tips and building a skeleton of the hand, and creating an ordered outline of the hand in order to measure curvature as well as other parameters. On design day, we watched proudly as the application correctly interpreted "Hello world," for the crowd of onlookers.'
+	    description: 'As an undergrad in EE at UWF, I led my team in the design of a gesture recognition application using Matlab. After collecting hundreds of images of American Sign Language (ASL) gestures, I was responsible for the design and implementation of various feature extraction algorithms. \n\n    Some of the challenges I tackled included isolating the hand, locating fingers and building a skeleton of the hand, and edge detection and odering. In the end we were able to achieve 95% accuracy classifying images.'
 	  },
 	  hemo: {
 	    name: 'Hemoglobe',
@@ -251,7 +264,7 @@
 	    video: 'https://www.youtube.com/embed/bbVLbFUvlJc',
 	    color: colors[6],
 	    skills: ['PIC', 'Embedded Systems', 'Plethysmography', 'Android'],
-	    description: 'As a master\'s student at Johns Hopkins University\'s Center for Bioengineering Innovation and Design, I had the good fortune of being on a team of exceptionally talented engineers. In addition to traveling to India to manage clinical studies and to Kenya to study the maternal health care system, we designed and built field ready prototypes of an anemia screening system for use in rural communities in developing countries. I was primarily responsible for the integration of the different components of the system, including the mobile app, finger clip, and analog front end.'
+	    description: 'At Johns Hopkins\' Center for Bioengineering Innovation and Design, I worked with a team of exceptional engineers to identify the need for noninvasive anemia screening in rural parts of developing countries. \n\n      We designed and built field ready prototypes of a device similar to a pulse oximeter. I was primarily responsible for the integration of the different components of the system, including the mobile app, finger clip, and analog front end, as well as testing the devices in India.'
 	  },
 	  trust: {
 	    name: 'Trust Funk Kids',
@@ -261,7 +274,7 @@
 	    img: './images/tfk.jpg',
 	    color: colors[7],
 	    skills: ['Creativity', 'Relaxation', 'Passion'],
-	    description: 'Guitar has been a passion of mine for nearly a decade now. In the summer of 2015, a few friends and I got together to jam. What started as a weekly excuse to get together for a few beers led to the forming of the Trust Funk Kids. Check out our demo track - I Can\'t Stay - via Soundcloud. The band\'s sound has been describe as a mix of Taylor Swift, Third Eye Blind, and the Red Hot Chili Peppers - a description I\'m both honored and embarrassed to acknowledge. Everyone has an outlet, and music is mine.'
+	    description: 'Guitar has been a passion of mine for over a decade now. In the summer of 2015, a few friends and I got together to jam. What started as a weekly excuse to get together for a few beers led to the forming of the Trust Funk Kids. \n\n      Check out our demo track - I Can\'t Stay - via Soundcloud. The band\'s sound has been describe as a mix of Taylor Swift, Third Eye Blind, and the Red Hot Chili Peppers - a description I\'m both honored and embarrassed to acknowledge. Everyone has an outlet, and music is mine.'
 	  },
 	  asteroids: {
 	    name: 'Asteroids and more',
@@ -271,7 +284,7 @@
 	    img: './images/asteroids.png',
 	    color: colors[8],
 	    skills: ['Python', 'HTML5 Canvas', 'Object Oriented Design'],
-	    description: 'In 2014, I started pursuing a certification in CS from Rice University via Coursera, the massive online open courses site. To date, I\'ve collected certifications in Principles of Computing Parts 1 & 2, Introduction to Interactive Programming in Python Parts 1 & 2 and Algorithms 1. The courses have been a great introduction to Python and even gave me the chance to design this simple video game.  Click on the image to the left to check it out (just press the play button in the top left corner to start the game).'
+	    description: 'In 2014, I started pursuing a certification in CS from Rice University via Coursera, the massive online open courses site. I collected certifications in Principles of Computing, Introduction to Interactive Programming in Python and Algorithms, among others. \n\n      The courses were a great introduction to Python and even gave me the chance to design this simple video game.  Click on the image to the left to check it out (just press the play button in the top left corner to start the game).'
 	  }
 	};
 
