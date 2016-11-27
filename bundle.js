@@ -108,14 +108,26 @@
 	    link.appendChild(li);
 	    $(link).on('mouseover', function () {
 	      var toHide = $('img#' + key);
+	      var iframeToHide = $('iframe#' + key);
 	      var pToHide = $('p#' + key);
 	      toHide.toggleClass('hidden');
+	      iframeToHide.toggleClass('hidden');
 	      pToHide.toggleClass('hidden');
 	    });
 	    $(link).on('mouseleave', function () {
 	      var toHide = $('img#' + key);
+	      var iframeToHide = $('iframe#' + key);
 	      var pToHide = $('p#' + key);
 	      toHide.toggleClass('hidden');
+	      iframeToHide.toggleClass('hidden');
+	      pToHide.toggleClass('hidden');
+	    });
+	    $(link).on('click', function () {
+	      var toHide = $('img#' + key);
+	      var iframeToHide = $('iframe#' + key);
+	      var pToHide = $('p#' + key);
+	      toHide.toggleClass('hidden');
+	      iframeToHide.toggleClass('hidden');
 	      pToHide.toggleClass('hidden');
 	    });
 	  }
@@ -130,8 +142,15 @@
 	    element.className = 'project-img';
 	    element.src = project.img;
 	    element.alt = project.longName;
-	  } else {
-	    element = document.createElement('li');
+	  } else if (project.video) {
+	    element = document.createElement('iframe');
+	    element.id = key;
+	    element.className = 'project-iframe';
+	    element.src = project.video;
+	    element.frameborder = "0";
+	    element.width = "80%";
+	    element.height = "60%";
+	    element.alt = project.longName;
 	  }
 	  return element;
 	};
@@ -204,7 +223,7 @@
 	    img: './images/scalable.png',
 	    color: colors[0],
 	    skills: ['React', 'Redux', 'JS', 'jQuery', 'HTML5 Canvas'],
-	    description: 'Theoretically, Scalable is an app meant to help guitarists visualize the fretboard. Practically, it is a project that allowed me to focus on something I\'m passionate about while sharpening my React and Redux skillz. This is very much a work in progress, but its also functional at the moment.'
+	    description: 'Scalable is an application for guitarists which enables the visualization of the fretboard. It\'s a project that allowed me to focus on something I\'m passionate about while sharpening my React and Redux skills. \n\n      The core feature is the programming of any combination of tuning, scale and chord, allowing musicians to get a visual sense of how notes come together or clash. Scalable is very much a work in progress, but it\'s also functional so feel free to try it out.'
 	  },
 	  iRetain: {
 	    name: 'iRetain',
