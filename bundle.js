@@ -218,9 +218,9 @@
 	  gnothi: {
 	    name: 'Gnothi',
 	    longName: 'Smart journaling application',
-	    github: 'https://www.github.com/mvincent7891/gnothi/',
-	    url: 'https://gnothi-journal.herokuapp.com/users/sign_in',
-	    video: 'https://www.youtube.com/watch?v=UJyPFt0yI0k&feature=youtu.be',
+	    github: '',
+	    url: 'https://www.youtube.com/watch?v=UJyPFt0yI0k&feature=youtu.be',
+	    img: './images/gnothi.png',
 	    color: colors[5],
 	    skills: ['React', 'Redux', 'JS', 'Rails', 'NLP', 'Product Design'],
 	    description: 'Gnothi is a smart journaling application in its infancy. I\'m the sole developer of the application, with design help coming from two of my former college classmates. We hope to build an application that can bring more value to the journaling experience.'
