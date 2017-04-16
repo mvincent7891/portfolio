@@ -215,6 +215,16 @@
 	var colors = ['#F57C00', '#C2185B', '#303F9F', '#E64A19', '#0097A7', '#1976D2', '#D32F2F', '#FFA000', '#0288D1', '#FBC02D', '#7B1FA2', '#512DA8'];
 	
 	var projects = exports.projects = {
+	  gnothi: {
+	    name: 'Gnothi',
+	    longName: 'Smart journaling application',
+	    github: 'https://www.github.com/mvincent7891/gnothi/',
+	    url: 'https://gnothi-journal.herokuapp.com/users/sign_in',
+	    video: 'https://www.youtube.com/watch?v=UJyPFt0yI0k&feature=youtu.be',
+	    color: colors[5],
+	    skills: ['React', 'Redux', 'JS', 'Rails', 'NLP', 'Product Design'],
+	    description: 'Gnothi is a smart journaling application in its infancy. I\'m the sole developer of the application, with design help coming from two of my former college classmates. We hope to build an application that can bring more value to the journaling experience.'
+	  },
 	  scalable: {
 	    name: 'Scalable',
 	    longName: 'Guitar application',
