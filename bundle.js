@@ -212,9 +212,19 @@
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	var colors = ['#F57C00', '#C2185B', '#303F9F', '#E64A19', '#0097A7', '#1976D2', '#D32F2F', '#FFA000', '#0288D1', '#FBC02D', '#7B1FA2', '#512DA8'];
+	var colors = ['#F57C00', '#C2185B', '#303F9F', '#E64A19', '#0097A7', '#1976D2', '#D32F2F', '#FFA000', '#0288D1', '#FBC02D', '#7B1FA2', '#512DA8', '#4CAF50'];
 	
 	var projects = exports.projects = {
+	  appStats: {
+	    name: 'App Usage Stats',
+	    longName: 'React Native module',
+	    github: 'https://github.com/mvincent7891/UsageStatsModule',
+	    url: 'https://github.com/mvincent7891/UsageStatsModule',
+	    img: './images/react_native.png',
+	    color: colors[12],
+	    skills: ['Jave', 'React Native', 'JS'],
+	    description: 'A Java / JS bridge which makes the Android platform\'s UsageStats class available from within your React Native app. Quickly obtain statistics on app usage over the past day or week. This represents my first real mobile / React Native endeavor.'
+	  },
 	  gnothi: {
 	    name: 'Gnothi',
 	    longName: 'Smart journaling application',
@@ -223,7 +233,7 @@
 	    img: './images/gnothi.png',
 	    color: colors[5],
 	    skills: ['React', 'Redux', 'JS', 'Rails', 'NLP', 'Product Design'],
-	    description: 'Gnothi is a smart journaling application in its infancy. I\'m the sole developer of the application, with design help coming from two of my former college classmates. We hope to build an application that can bring more value to the journaling experience.'
+	    description: 'Gnothi is a digital wellness assistant and smart journaling application in its infancy. I\'m the sole developer of the application, with design help coming from two of my former college classmates. We aim to build a platform which helps users extract more value from their digital lives.'
 	  },
 	  scalable: {
 	    name: 'Scalable',
@@ -232,7 +242,7 @@
 	    url: 'https://mvincent7891.github.io/scalable/',
 	    img: './images/scalable.png',
 	    color: colors[0],
-	    skills: ['React', 'Redux', 'JS', 'jQuery', 'HTML5 Canvas'],
+	    skills: ['React', 'Redux', 'JS', 'jQuery'],
 	    description: 'Scalable is an application for guitarists which enables the visualization of the fretboard. It\'s a project that allowed me to focus on something I\'m passionate about while sharpening my React and Redux skills. \n\n      The core feature is the programming of any combination of tuning, scale and chord, allowing musicians to get a visual sense of how notes come together or clash. Scalable is very much a work in progress, but it\'s also functional so feel free to try it out.'
 	  },
 	  iRetain: {
