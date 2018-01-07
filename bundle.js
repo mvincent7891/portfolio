@@ -215,6 +215,16 @@
 	var colors = ['#F57C00', '#C2185B', '#303F9F', '#E64A19', '#0097A7', '#1976D2', '#D32F2F', '#FFA000', '#0288D1', '#FBC02D', '#7B1FA2', '#512DA8', '#4CAF50'];
 	
 	var projects = exports.projects = {
+	  gnothiMobile: {
+	    name: 'Gnothi Mobile',
+	    longName: 'Rails API & Android App',
+	    github: 'https://github.com/mvincent7891/gnapi',
+	    url: 'https://github.com/mvincent7891/gnapi',
+	    img: './images/gnothi_mobile.png',
+	    color: colors[6],
+	    skills: ['Jave', 'Android', 'Ruby', 'Rails', 'Product MGMT'],
+	    description: 'An Android mobile application backed by Rails API and Postgres, Gnothi Mobile allows users to track app usage and set usage goals for themselves. In addition to writing the entire Rails backend and test suite, I contribute regularly to the Android code base and managed an oversees developer in the initial frontend development.'
+	  },
 	  appStats: {
 	    name: 'App Usage Stats',
 	    longName: 'React Native module',
