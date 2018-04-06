@@ -216,10 +216,10 @@
 	
 	var projects = exports.projects = {
 	  gnothiMobile: {
-	    name: 'Gnothi Mobile',
+	    name: 'Gnothi for Android',
 	    longName: 'Rails API & Android App',
 	    github: 'https://github.com/mvincent7891/gnapi',
-	    url: 'https://github.com/mvincent7891/gnapi',
+	    url: 'https://www.gnothi.life',
 	    img: './images/gnothi_mobile.png',
 	    color: colors[6],
 	    skills: ['Jave', 'Android', 'Ruby', 'Rails', 'Product MGMT'],
